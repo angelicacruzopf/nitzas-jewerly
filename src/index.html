@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- FIXED NAV -->
+
+    <nav
+      class="navbar fixed-nav flex-row justify-between items-center text-sm bg-white py-2 px-4 fixed z-50 w-full gap-4 shadow-md"
+    >
+      <div class="h-10">
+        <img
+          src="./img/logos/logo-horizontal.svg"
+          alt="Logo nitza's"
+          class="object-fit w-full h-full"
+        />
+      </div>
+      <div class="flex flex-row grow justify-center max-w-[1000px]">
+        <ul
+          class="flex flex-row grow justify-evenly font-normal text-center text-darkGray gap-2 cursor-pointer"
+        >
+          <li>
+            <a href="#hero">Inicio</a>
+          </li>
+          <li>
+            <a href="#products">Productos</a>
+          </li>
+          <li>
+            <a href="#about">Sobre nosotros</a>
+          </li>
+          <li>
+            <a href="#departamentos">Departamentos</a>
+          </li>
+          <li>
+            <a href="#contacto">Contacto</a>
+          </li>
+          <li>
+            <a href="#sucursales">Sucursales </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="bg-black text-white py-2 px-4 font-bold text-lg flex gap-2 items-center hover:bg-neutralGray transition-all ease-in sm:text-xs lg:text-base"
+        >
+          <div>
+            <img src="./img/icons/call-icon.png" alt="Ícono llamada" class="" />
+          </div>
+          <span>(939) 252 4501</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE NAV -->
+
+    <nav
+      class="mobile-nav fixed flex-row justify-between items-center text-sm bg-white z-40 w-full shadow-md top-0 flex p-4"
+    >
+      <div class="flex flex-row items-center justify-between text-sm w-full">
+        <div class="h-10">
+          <img
+            src="./img/logos/logo-simple.svg"
+            class="object-cover h-full w-full"
+            alt="Logo ícono"
+          />
+        </div>
+        <div class="flex items-center gap-2">
+          <div>
+            <button
+              type="button"
+              class="py-2 px-4 rounded-full font-bold text-lg items-center hover:bg-secondary transition-all ease-in sm:text-xs lg:text-base"
+            >
+              <div class="text-lg text-darkGray cursor-pointer">
+                <img
+                  src="./img/icons/call-icon-bk.png"
+                  alt="Ícono llamada"
+                  class="object-cover"
+                />
+              </div>
+            </button>
+          </div>
+          <div class="text-lg text-darkGray cursor-pointer">
+            <img src="./img/icons/menu.png" alt="Menú mobile" />
+
+            <div
+              id="menu"
+              class="checked:flex flex-col grow justify-center absolute top-[76px] right-[0] hidden"
+            >
+              <ul
+                class="navbar flex flex-col grow justify-evenly font-medium text-lighterGray text-center divide-y z-50 bg-white"
+              >
+                <li>
+                  <a href="#hero">Inicio</a>
+                </li>
+                <li>
+                  <a href="#products">Productos</a>
+                </li>
+                <li>
+                  <a href="#about">Sobre nosotros</a>
+                </li>
+                <li>
+                  <a href="#departamentos">Departamentos</a>
+                </li>
+                <li>
+                  <a href="#contacto">Contacto</a>
+                </li>
+                <li>
+                  <a href="#sucursales">Sucursales</a>
+                </li>
+                <li>
+                  <a href="#horarios">Horarios</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- BANNER PROMOCIONAL -->
+
+    <section>
+      <div
+        class="w-full bg-mediumGray text-white text-sm sm-banner flex justify-between items-center pt-8 pb-4 md:pt-4 px-4 absolute top-[60px] sm:top-[55px] lg:top-[50px] z-30"
+      >
+        <div>
+          <img src="./img/icons/arrow-left-w.png" alt="Arrow left" />
+        </div>
+        <p class="text-center">
+          Hasta el <strong>70%</strong> de <strong>descuento.</strong>
+        </p>
+        <div>
+          <img src="./img/icons/arrow-right-w.png" alt="Arrow right" />
+        </div>
+      </div>
+    </section>
+
+    <!-- HERO -->
+
+    <section
+      id="hero"
+      class="text-center flex flex-col md:flex-row items-center banner justify-between relative h-[800px] md:h-[600px] mt-[50px] md:mt-0 md:top-[20px]"
+    >
+      <div class="hidden md:inline-block h-full w-1/2">
+        <img
+          src="./img/banner-img-desktop@2x.png"
+          alt="Sandalias"
+          class="object-cover h-full w-full"
+        />
+      </div>
+      <div
+        class="flex flex-col justify-evenly items-center w-[80%] md:w-1/2 h-[70%] md:bg-third py-20 md:h-full"
+      >
+        <div class="w-full md:w-2/3 py-4">
+          <h2 class="text-xl uppercase font-bold">Gran venta de</h2>
+          <img
+            src="./img/xmas-letters-red@2x.png"
+            alt="Letras rojas"
+            class="w-full md:hidden"
+          />
+          <img
+            src="./img/xmas-letters-white@2x.png"
+            alt="Letras rojas"
+            class="hidden md:inline-block w-full"
+          />
+        </div>
+        <div class="w-full flex flex-col items-center">
+          <div class="mb-6 w-full">
+            <h1 class="font-semibold text-2xl leading-12">
+              Hasta el <br />
+              <strong class="text-[64px] text-[#D62744] md:text-white"
+                >70%</strong
+              >
+              <br />
+              DE DESCUENTO
+            </h1>
+          </div>
+          <div
+            class="flex flex-row items-center justify-center w-[80%] md:w-[40%] max-w-[342px]"
+          >
+            <button
+              type="submit"
+              class="bg-darkGray text-white py-2 px-4 font-semibold text-lg flex gap-2 items-center justify-center w-full hover:bg-black transition-all ease-in"
+            >
+              Ver ofertas
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+
+    <section id="products" class="flex items-center py-16 flex-col">
+      <div class="w-[90%] md:w-full flex flex-col items-center gap-4">
+        <h2 class="font-bold text-center text-2xl md:text-5xl">
+          Los + vendidos
+        </h2>
+
+        <div class="w-full md:hidden">
+          <div class="slideshow-container">
+            <!-- CARD 01 -->
+
+            <div class="w-full min-w-[280px] flex flex-col">
+              <div class="h-96 shadow-xl">
+                <img
+                  src="./img/products/AA01s.png"
+                  alt="Sandalia GABY by Menina"
+                  class="object-cover w-full h-full"
+                />
+              </div>
+              <div class="py-6 px-4">
+                <h3 class="font-bold text-xl pb-2">Sandalia GABY by Menina</h3>
+                <p class="pb-2 h-12 text-neutralGray line-clamp-2">
+                  Tallas 5 al 10
+                </p>
+                <div class="flex items-end font-bold">
+                  <p class="text-2xl">$38.00</p>
+                  <p class="ms-2 text-lg text-[#797C94] font-normal">+IVU</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 02 -->
+
+            <div
+              class="flex flex-row gap-4 sm:flex-wrap items-centers py-8 w-full justify-center"
+            >
+              <div class="w-full md:w-[30%] min-w-[280px] flex flex-col">
+                <div class="h-96 shadow-xl">
+                  <img
+                    src="./img/products/AA02s.png"
+                    alt="Red sneakers by Menina"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <div class="py-6 px-4">
+                  <h3 class="font-bold text-xl pb-2">Red sneakers by Menina</h3>
+                  <p class="pb-2 h-12 text-neutralGray line-clamp-2">
+                    Tallas 5 al 10
+                  </p>
+                  <div class="flex items-end font-bold">
+                    <p class="text-2xl">$42.00</p>
+                    <p class="ms-2 text-lg text-[#797C94] font-normal">+IVU</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 03 -->
+
+            <div
+              class="flex flex-row gap-4 sm:flex-wrap items-centers py-8 w-full justify-center"
+            >
+              <div class="w-full md:w-[30%] min-w-[280px] flex flex-col">
+                <div class="h-96 shadow-xl">
+                  <img
+                    src="./img/products/AA03s.png"
+                    alt="Sandalia GABY by Menina"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <div class="py-6 px-4">
+                  <h3 class="font-bold text-xl pb-2">
+                    Sandalia GABY by Menina
+                  </h3>
+                  <p class="pb-2 h-12 text-neutralGray line-clamp-2">
+                    Tallas 5 al 10
+                  </p>
+                  <div class="flex items-end font-bold">
+                    <p class="text-2xl">$65.00</p>
+                    <p class="ms-2 text-lg text-[#797C94] font-normal">+IVU</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 04 -->
+
+            <div
+              class="flex flex-row gap-4 sm:flex-wrap items-centers py-8 w-full justify-center"
+            >
+              <div class="w-full md:w-[30%] min-w-[280px] flex flex-col">
+                <div class="h-96 shadow-xl">
+                  <img
+                    src="./img/products/AA04s.png"
+                    alt="Pulseras de fantasía fina"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <div class="py-6 px-4">
+                  <h3 class="font-bold text-xl pb-2">
+                    Pulseras de fantasía fina
+                  </h3>
+                  <p class="pb-2 h-12 text-neutralGray line-clamp-2">
+                    Disponibles en suc. Cororza Por pedido en suc. Morovis
+                  </p>
+                  <div class="flex items-end font-bold">
+                    <p class="text-2xl">$15.00</p>
+                    <p class="ms-2 text-lg text-[#797C94] font-normal">+IVU</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 05 -->
+
+            <div
+              class="flex flex-row gap-4 sm:flex-wrap items-centers py-8 w-full justify-center"
+            >
+              <div class="w-full md:w-[30%] min-w-[280px] flex flex-col">
+                <div class="h-96 shadow-xl">
+                  <img
+                    src="./img/products/AA05s.png"
+                    alt="Pulseras de fantasía fina"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <div class="py-6 px-4">
+                  <h3 class="font-bold text-xl pb-2">
+                    Pulseras de fantasía fina
+                  </h3>
+                  <p class="pb-2 h-12 text-neutralGray line-clamp-2">
+                    Disponibles en suc. Cororza Por pedido en suc. Morovis
+                  </p>
+                  <div class="flex items-end font-bold">
+                    <p class="text-2xl">$15.00</p>
+                    <p class="ms-2 text-lg text-[#797C94] font-normal">+IVU</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 06 -->
+
+            <div
+              class="flex flex-row gap-4 sm:flex-wrap items-centers py-8 w-full justify-center"
+            >
+              <div class="w-full md:w-[30%] min-w-[280px] flex flex-col">
+                <div class="h-96 shadow-xl">
+                  <img
+                    src="./img/products/AA06s.png"
+                    alt="Variedad de pantallas en pack"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <div class="py-6 px-4">
+                  <h3 class="font-bold text-xl pb-2">
+                    Variedad de pantallas en pack
+                  </h3>
+                  <p class="pb-2 h-12 text-neutralGray line-clamp-2">
+                    Hipoalergénicas, de acero inoxidables
+                  </p>
+                  <div class="flex items-end font-bold">
+                    <p class="text-2xl">$15.00</p>
+                    <p class="ms-2 text-lg text-[#797C94] font-normal">+IVU</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center mb-8">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+        <!-- PARA ESCRITORIO -->
+
+        <div
+          class="hidden md:flex flex-row gap-4 sm:flex-row sm:flex-wrap items-center md:items-start py-16 w-full justify-center"
+        >
+          <!-- CARD 01 -->
+
+          <div class="w-[30%] min-w-[280px] flex flex-col">
+            <div class="h-96 shadow-xl">
+              <img
+                src="./img/products/AA01s.png"
+                alt="Sandalia GABY by Menina"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="py-6 px-4">
+              <h3 class="font-bold text-xl pb-2">Sandalia GABY by Menina</h3>
+              <p class="pb-2 h-12 text-neutralGray line-clamp-2">
+                Tallas 5 al 10
+              </p>
+              <div class="flex items-end font-bold">
+                <p class="text-2xl">$38.00</p>
+                <p class="ms-2 text-lg text-[#797C94] font-normal">+IVU</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 02 -->
+
+          <div class="w-[30%] min-w-[280px] flex flex-col">
+            <div class="h-96 shadow-xl">
+              <img
+                src="./img/products/AA02s.png"
+                alt="Red sneakers by Menina"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="py-6 px-4">
+              <h3 class="font-bold text-xl pb-2">Red sneakers by Menina</h3>
+              <p class="pb-2 h-12 text-neutralGray line-clamp-2">
+                Tallas 5 al 10
+              </p>
+              <div class="flex items-end font-bold">
+                <p class="text-2xl">$42.00</p>
+                <p class="ms-2 text-lg text-[#797C94] font-normal">+IVU</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 03 -->
+
+          <div class="w-[30%] min-w-[280px] flex flex-col">
+            <div class="h-96 shadow-xl">
+              <img
+                src="./img/products/AA03s.png"
+                alt="Sandalia GABY by Menina"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="py-6 px-4">
+              <h3 class="font-bold text-xl pb-2">Sandalia GABY by Menina</h3>
+              <p class="pb-2 h-12 text-neutralGray line-clamp-2">
+                Tallas 5 al 10
+              </p>
+              <div class="flex items-end font-bold">
+                <p class="text-2xl">$65.00</p>
+                <p class="ms-2 text-lg text-[#797C94] font-normal">+IVU</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 04 -->
+
+          <div class="w-[30%] min-w-[280px] flex flex-col">
+            <div class="h-96 shadow-xl">
+              <img
+                src="./img/products/AA04s.png"
+                alt="Pulseras de fantasía fina"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="py-6 px-4">
+              <h3 class="font-bold text-xl pb-2">Pulseras de fantasía fina</h3>
+              <p class="pb-2 h-12 text-neutralGray line-clamp-2">
+                Disponibles en suc. Cororza Por pedido en suc. Morovis
+              </p>
+              <div class="flex items-end font-bold">
+                <p class="text-2xl">$15.00</p>
+                <p class="ms-2 text-lg text-[#797C94] font-normal">+IVU</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 05 -->
+
+          <div class="w-[30%] min-w-[280px] flex flex-col">
+            <div class="h-96 shadow-xl">
+              <img
+                src="./img/products/AA05s.png"
+                alt="Pulseras de fantasía fina"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="py-6 px-4">
+              <h3 class="font-bold text-xl pb-2">Pulseras de fantasía fina</h3>
+              <p class="pb-2 h-12 text-neutralGray line-clamp-2">
+                Disponibles en suc. Cororza Por pedido en suc. Morovis
+              </p>
+              <div class="flex items-end font-bold">
+                <p class="text-2xl">$15.00</p>
+                <p class="ms-2 text-lg text-[#797C94] font-normal">+IVU</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 06 -->
+
+          <div class="w-[30%] min-w-[280px] flex flex-col">
+            <div class="h-96 shadow-xl">
+              <img
+                src="./img/products/AA06s.png"
+                alt="Variedad de pantallas en pack"
+                class="object-cover w-full h-full"
+              />
+            </div>
+            <div class="py-6 px-4">
+              <h3 class="font-bold text-xl pb-2">
+                Variedad de pantallas en pack
+              </h3>
+              <p class="pb-2 h-12 text-neutralGray line-clamp-2">
+                Hipoalergénicas, de acero inoxidables
+              </p>
+              <div class="flex items-end font-bold">
+                <p class="text-2xl">$15.00</p>
+                <p class="ms-2 text-lg text-[#797C94] font-normal">+IVU</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full gap-x-4 mt-10 h-fit flex flex-col justify-center items-center"
+        >
+          <div class="w-full md:w-1/3">
+            <button
+              type="button"
+              class="bg-darkGray text-white py-2 px-4 font-semibold text-lg flex gap-2 items-center justify-center w-full hover:bg-black transition-all ease-in"
+            >
+              Ver más productos
+            </button>
+          </div>
+
+          <div class="flex justify-center">
+            <button
+              type="button"
+              class="text-darkGray py-4 rounded-full font-semibold text-lg flex gap-2 items-center transition-all ease-in"
+            >
+              Descargar catálogo en PDF
+              <div>
+                <img src="./img/icons/frame.png" alt="Download icon" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+
+    <section id="about">
+      <div class="bg-darkGray flex flex-col items-center py-16">
+        <div class="flex flex-col items-center w-[90%] md:w-1/2 max-w-[800px]">
+          <div class="flex flex-col justify-center items-center gap-8">
+            <div class="h-36">
+              <img
+                src="./img/logos/nitzas-logo-full-white.svg"
+                alt="Logotipo Nitza's Jewerly"
+                class="object-cover h-full w-full"
+              />
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div
+                class="text-white flex flex-col text-center font-semibold gap-4"
+              >
+                <p>
+                  En Nitza's tenemos lo que necesitas para verte y sentirte
+                  bien.
+                </p>
+                <p>
+                  Somos tu tienda de confianza para darte los gustos que te
+                  mereces y contamos con gran variedad de productos especiales
+                  para ti..
+                </p>
+                <p>¡Exprésate libremente!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPARTAMENTOS -->
+
+    <section
+      id="departamentos"
+      class="flex justify-center bg-secondary text-white"
+    >
+      <div
+        class="flex flex-col items-center w-[90%] md:w-9/12 pt-16 pb-24 max-w-[1000px]"
+      >
+        <h2 class="font-bold text-center mb-10 text-2xl md:text-5xl">
+          Departamentos
+        </h2>
+        <div
+          class="flex flex-wrap justify-evenly sm:justify-evenly md:justify-evenly gap-x-2 md:gap-x-16 gap-y-20 h-full"
+        >
+          <!-- CARD 01 -->
+
+          <div
+            class="flex flex-col justify-center items-center text-center mb-4"
+          >
+            <div class="bg-gray-300 rounded-full w-32 h-32 mb-4">
+              <img
+                src="img/departamentos/DD01s.png"
+                alt="Ropa"
+                class="object-cover h-full w-full"
+              />
+              <div>
+                <h4 class="font-semibold mt-4">Ropa</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 02 -->
+
+          <div
+            class="flex flex-col justify-center items-center text-center mb-4"
+          >
+            <div class="bg-gray-300 rounded-full w-32 h-32 mb-4">
+              <img
+                src="img/departamentos/DD02s.png"
+                alt="Calzado"
+                class="object-cover h-full w-full"
+              />
+              <div>
+                <h4 class="font-semibold mt-4">Calzado</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 03 -->
+
+          <div
+            class="flex flex-col justify-center items-center text-center mb-4"
+          >
+            <div class="bg-gray-300 rounded-full w-32 h-32 mb-4">
+              <img
+                src="img/departamentos/DD03s.png"
+                alt="Joyería"
+                class="object-cover h-full w-full"
+              />
+              <div>
+                <h4 class="font-semibold mt-4">Joyería</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 04 -->
+
+          <div
+            class="flex flex-col justify-center items-center text-center mb-4"
+          >
+            <div class="bg-gray-300 rounded-full w-32 h-32 mb-4">
+              <img
+                src="img/departamentos/DD04s.png"
+                alt="Perfumes y lociones"
+                class="object-cover h-full w-full"
+              />
+              <div>
+                <h4 class="font-semibold mt-4">Perfumes y lociones</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 05 -->
+
+          <div
+            class="flex flex-col justify-center items-center text-center mb-4"
+          >
+            <div class="bg-gray-300 rounded-full w-32 h-32 mb-4">
+              <img
+                src="img/departamentos/DD05s.png"
+                alt="Accesorios"
+                class="object-cover h-full w-full"
+              />
+              <div>
+                <h4 class="font-semibold mt-4">Accesorios</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 06 -->
+
+          <div
+            class="flex flex-col justify-center items-center text-center mb-4"
+          >
+            <div class="bg-gray-300 rounded-full w-32 h-32 mb-4">
+              <img
+                src="img/departamentos/DD06s.png"
+                alt="Juguetes"
+                class="object-cover h-full w-full"
+              />
+              <div>
+                <h4 class="font-semibold mt-4">Juguetes</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+
+    <section class="flex items-center py-16 flex-col">
+      <div class="w-[90%] md:w-full flex flex-col items-center max-w-[1000px]">
+        <h2 class="font-bold text-center text-2xl md:text-5xl">
+          Lo que piensan nuestros clientes
+        </h2>
+        <div class="md:hidden">
+          <div class="testimonial-container py-16">
+            <!-- CARD 01 -->
+
+            <div
+              class="flex flex-row gap-4 sm:flex-wrap items-centers py-8 justify-center"
+            >
+              <div class="w-full flex flex-col items-center gap-4">
+                <div class="flex flex-col items-center text-center gap-4">
+                  <p class="text-gray-500">
+                    <strong>"</strong>Me encanta ir a la tienda, tienen mucha
+                    variedad, buenos especiales y las chicas son excelentes.
+                    100% recomendado. Muchas bendiciones! <strong>"</strong>
+                  </p>
+                  <h4 class="font-semibold">Jane Doe</h4>
+                  <div>
+                    <img
+                      src="img/review/Facebook-color-mini.png"
+                      alt="Facebook logo"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 02 -->
+
+            <div
+              class="flex flex-row gap-4 sm:flex-wrap items-centers py-8 w-full justify-center"
+            >
+              <div
+                class="w-full md:w-[30%] min-w-[280px] flex flex-col items-center gap-4"
+              >
+                <div class="flex flex-col items-center text-center gap-4">
+                  <p class="text-gray-500">
+                    <strong>"</strong>al 100% recomendado y buen servicio y muy
+                    amables <strong>"</strong>
+                  </p>
+                  <h4 class="font-semibold">Jane Doe</h4>
+                  <div>
+                    <img
+                      src="img/review/Facebook-color-mini.png"
+                      alt="Facebook logo"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 03 -->
+
+            <div
+              class="flex flex-row gap-4 sm:flex-wrap items-centers py-8 w-full justify-center"
+            >
+              <div
+                class="w-full md:w-[30%] min-w-[280px] flex flex-col items-center gap-4"
+              >
+                <div class="flex flex-col items-center text-center gap-4">
+                  <p class="text-gray-500">
+                    <strong>"</strong>Excelente Servicio y Muy buena Tienda la
+                    cual podrás conseguir tu outfit <strong>"</strong>
+                  </p>
+                  <h4 class="font-semibold">Jane Doe</h4>
+                  <div>
+                    <img
+                      src="img/review/Facebook-color-mini.png"
+                      alt="Facebook logo"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center mb-8">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+        <!-- PARA ESCRITORIO -->
+
+        <div
+          class="hidden md:flex flex-row gap-8 sm:flex-row sm:flex-wrap items-center md:items-start py-16 w-full justify-evenly"
+        >
+          <!-- CARD 01 -->
+
+          <div class="w-[30%] min-w-[280px]">
+            <div class="flex flex-col items-center gap-4">
+              <div class="h-32 w-32 shadow-xl rounded-full">
+                <img
+                  src="./img/review/RR01s.png"
+                  alt="Jane Doe"
+                  class="object-cover"
+                />
+              </div>
+
+              <div class="flex flex-col items-center text-center gap-4">
+                <p class="text-gray-500">
+                  <strong>"</strong>Me encanta ir a la tienda, tienen mucha
+                  variedad, buenos especiales y las chicas son excelentes. 100%
+                  recomendado. Muchas bendiciones! <strong>"</strong>
+                </p>
+                <h4 class="font-semibold">Jane Doe</h4>
+                <div>
+                  <img
+                    src="img/review/Facebook-color-mini.png"
+                    alt="Facebook logo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 02 -->
+
+          <div
+            class="flex flex-row gap-4 sm:flex-wrap items-centers py-8 justify-center w-[30%] min-w-[280px]"
+          >
+            <div class="flex flex-col items-center gap-4 w-full">
+              <div class="h-32 w-32 shadow-xl rounded-full">
+                <img
+                  src="./img/review/RR02s.png"
+                  alt="Jane Doe"
+                  class="object-coverl"
+                />
+              </div>
+
+              <div class="flex flex-col items-center text-center gap-4">
+                <p class="text-gray-500">
+                  <strong>"</strong>al 100% recomendado y buen servicio y muy
+                  amables <strong>"</strong>
+                </p>
+                <h4 class="font-semibold">Jane Doe</h4>
+                <div>
+                  <img
+                    src="img/review/Facebook-color-mini.png"
+                    alt="Facebook logo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 03 -->
+
+          <div style="width: 30%" class="w-[30%] min-w-[280px]">
+            <div class="flex flex-col items-center gap-4">
+              <div class="h-32 w-32 shadow-xl rounded-full">
+                <img
+                  src="./img/review/RR03s.png"
+                  alt="Jane Doe"
+                  class="object-cover"
+                />
+              </div>
+
+              <div class="flex flex-col items-center text-center gap-4">
+                <p class="text-gray-500">
+                  <strong>"</strong>Excelente Servicio y Muy buena Tienda la
+                  cual podrás conseguir tu outfit <strong>"</strong>
+                </p>
+                <h4 class="font-semibold">Jane Doe</h4>
+                <div>
+                  <img
+                    src="img/review/Facebook-color-mini.png"
+                    alt="Facebook logo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+
+    <section id="contacto" class="flex justify-center bg-third">
+      <div
+        class="flex flex-col items-center md:flex-row py-20 w-[90%] lg:w-9/12 place-self-center gap-8 text-white max-w-[1000px]"
+      >
+        <div class="flex flex-col gap-8 md:w-1/2">
+          <h2
+            class="font-bold md:mb-10 text-2xl text-center md:text-4xl md:text-left"
+          >
+            ¿Necesitas algo?
+            <br />
+            ¡Envíanos un mensaje!
+          </h2>
+          <div class="font-semibold md:inline-block" hidden>
+            <div class="flex items-center mb-7">
+              <img src="./img/icons/sms-w.png" alt="Icon message" />
+              <p class="ms-4 break-all underline">nitzajewerly2018@gmail.com</p>
+            </div>
+            <div class="flex items-center mb-7">
+              <img src="./img/icons/call-icon-w.png" alt="Icon call" />
+              <div class="flex flex-col gap-y-2 ms-4 underline">
+                <p>(939) 252 4501</p>
+                <p>(939) 252 1602</p>
+              </div>
+            </div>
+            <div class="flex items-center mb-7">
+              <img src="./img/icons/clock-w.png" alt="Icon clock" />
+              <div class="flex flex-col ms-4 gap-y-4">
+                <p><strong>Horarios:</strong></p>
+                <p>Lunes a domingo: 10:00am - 6:00pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:w-1/2 gap-4 w-full">
+          <!-- FORMULARIO -->
+
+          <form class="flex flex-col gap-4 h-full text-neitralGray">
+            <div class="flex flex-col md:flex-row gap-4 w-full">
+              <div class="field md:w-1/2">
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  required
+                  maxlength="32"
+                  pattern="[A-Za-z\s]{1,32}"
+                  title="Nombres"
+                  class="invalid:border-pink-500 invalid:text-pink-600"
+                />
+                <label
+                  htmlFor="firstName"
+                  title="Nombres"
+                  data-title="Nombres"
+                ></label>
+                <span class="error">
+                  Este campo no puede estar vacío, e.g. John
+                </span>
+              </div>
+              <div class="field md:w-1/2">
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  maxlength="32"
+                  pattern="[A-Za-z]{1,32}"
+                  required
+                  class="invalid:border-pink-500 invalid:text-pink-600"
+                />
+                <label
+                  htmlFor="lastName"
+                  title="Apellidos"
+                  data-title="Apellidos"
+                ></label>
+                <span class="error"
+                  >Este campo no puede estar vacío, e.g. Doe</span
+                >
+              </div>
+            </div>
+
+            <div class="col-span-2 field">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="invalid:border-pink-500 invalid:text-pink-600"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                required
+              />
+              <label
+                htmlFor="email"
+                title="Correo electrónico"
+                data-title="Correo electrónico"
+                class="peer-invalid:text-pink-600"
+              ></label>
+              <span class="error">
+                Este campo no puede estar vacío, e.g. correo@ejemplo.com
+              </span>
+            </div>
+
+            <div class="col-span-2 field">
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                class="focus:invalid:border-pink-500 invalid:text-pink-600"
+                pattern="^\+[1-9]{1}[0-9]{3,14}$"
+                required
+              />
+
+              <label
+                htmlFor="phone"
+                title="Número telefónico"
+                data-title="Número telefónico"
+              ></label>
+              <span class="error">
+                Este campo no puede estar vacío, e.g. +27 123 4567
+              </span>
+            </div>
+            <div class="col-span-2 row-span-6 h-full field">
+              <textarea
+                name="message"
+                id="message"
+                required
+                class="h-full placeholder:pt-2 focus:invalid:border-pink-500 invalid:text-pink-600"
+              ></textarea>
+
+              <label
+                htmlFor="message"
+                title="Escribe un mensaje"
+                data-title="Escribe un mensaje"
+              ></label>
+            </div>
+          </form>
+
+          <div
+            class="mt-4 opacity-50 transition-opacity hover:opacity-100 hover:ease-in"
+          >
+            <button
+              type="submit"
+              class="bg-darkGray text-white py-2 px-4 font-semibold text-lg flex gap-2 items-center justify-center w-full hover:bg-black transition-all ease-in"
+            >
+              Enviar mensaje
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- SUCURSALES -->
+
+     <section id="sucursales" class="flex justify-center">
+        <div
+          class="flex flex-col w-[90%] md:w-9/12 md:justify-center items-center max-w-[1000px] py-16"
+        >
+          <h2 class="font-bold text-center mb-10 text-2xl md:text-5xl">
+            Nuestras sucursales
+          </h2>
+          <div class="flex flex-col max-w-[800px]">
+            <div class="flex items-center">
+              <h3 class="font-bold py-4">Puerto rico</h3>
+              <span class="text-lighterGray ms-2">(2 ubicaciones)</span>
+            </div>
+            <div class="divide-y w-full flex flex-col justify-center md:justify-between md:flex-row md:divide-y-0">
+
+              <!-- SUCURSAL 01 -->
+  
+              <div class="flex items-center justify-between md:w-[45%] gap-2">
+                <div class="bg-gray-300 rounded-3xl my-4">
+                  <img src="img/map.png" alt="mapa" />
+                </div>
+                <div class="w-1/2">
+                  <h4 class="font-bold md:text-lg ms-4 sm:m-0">
+                    Corozal | Carr. 818 KM 0.8 Bo. Cibuco
+                  </h4>
+                  <p class="font-normal text-lighterGray ms-4 sm:m-0">
+                    (787) 516 9563
+                  </p>
+                </div>
+                <div class="ms-4 sm:m-0">
+                    <button
+                    type="button"
+                    class=" bg-black text-white py-2 px-4 font-bold text-lg flex gap-2 items-center hover:opacity-50 transition-all ease-in sm:text-xs lg:text-base"
+                  >
+                    Llamar
+                  </button>
+                </div>
+              </div>
+  
+              <!-- SUCURSAL 02 -->
+  
+              <div class="flex items-center justify-between md:w-[45%] gap-2">
+                <div class="bg-gray-300 rounded-3xl my-4">
+                  <img src="img/map.png" alt="mapa" />
+                </div>
+                <div class="w-1/2">
+                  <h4 class="font-bold md:text-lg ms-4 sm:m-0">
+                    Morovis | Calle Principal 44, Morovis
+                  </h4>
+                  <p class="font-normal text-lighterGray ms-4 sm:m-0">
+                    (939) 450 4546
+                  </p>
+                </div>
+                <div class="ms-4 sm:m-0">
+                  <button
+                    type="button"
+                    class=" bg-black text-white py-2 px-4 font-bold text-lg flex gap-2 items-center hover:opacity-50 transition-all ease-in sm:text-xs lg:text-base"
+                  >
+                    Llamar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- HORARIOS -->
+  
+      <section id="horarios">
+        <div
+          class="flex flex-col items-center ms-4 text-neutralGray gap-y-4 md:hidden text-lg font-semibold max-w-[1000px] pb-16"
+        >
+          <p class="font-bold text-black text-2xl">Horarios:</p>
+          <p>Lunes a Domingo: 10:00am - 6:00pm</p>
+        </div>
+      </section>
+  
+      <!-- FOOTER -->
+  
+      <section
+        class="bg-darkGray flex flex-col justify-center items-center py-16"
+      >
+        <div
+          class="md:grid grid-cols-3 w-[90%] sm:w-3/5 place-items-center pb-16 max-w-[1000px]"
+        >
+          <div class="flex flex-col gap-6 w-full">
+            <div
+              class=" justify-self-center self-center flex justify-center items-center"
+            >
+              <img
+                src="img/logos/logo-w-text.png"
+                alt="Ícono del logo"
+                class="md:object-cover md:w-14"
+              />
+            </div>
+            <p class="text-white text-center">Marcando la diferencia</p>
+            <div
+              class="text-white opacity-50 text-5xl flex flex-row justify-center mb-6 sm:mb-0"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+          </div>
+          <div class="flex flex-col gap-y-4 mb-4 sm:mb-0 text-white">
+            <h3 class="font-bold">Mapa del sitio</h3>
+            <ul class="grid gap-y-4 underline opacity-60">
+              <li class="sm:hidden"><a href="#hero">Inicio</a></li>
+              <li><a href="#products">Nuestros productos</a></li>
+              <li><a href="#about">Acerca de nosotros</a></li>
+              <li><a href="#departamentos">Departamentos</a></li>
+            </ul>
+          </div>
+          <div class="text-white opacity-60">
+            <ul class="grid gap-y-4 underline">
+              <li><a href="#contacto">Contacto</a></li>
+              <li><a href="#sucursales">Nuestras sucursales</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="opacity-50 w-[90%] md:w-3/5" />
+        <span
+          class="sm:text-center text-white opacity-60 pt-8 mb-8 w-[90%] md:w-3/5"
+          >2023, Hardware Solutions Inc., Todos los derechos reservados.</span
+        >
+      </section>
+
+
+  </body>
+</html>
