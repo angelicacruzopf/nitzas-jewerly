@@ -3,6 +3,10 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-mobile': "url('/src/img/banner-mobile@2x.png')",
+        'hero-desktop': "url('/src/img/banner-img-desktop@2x.png')",
+      },
       lineHeight: {
         'extra-loose': '2.5',
         '12': '3rem',
@@ -16,8 +20,8 @@ module.exports = {
         darkGray: "#191A1B",
         mediumGray: "#292D32",
         neutralGray: "#666666",
-        lighterGray: "#D2D2D2",
-        grayWhithe: "#F0F0F0",
+        lightGray: "#D2D2D2",
+        grayWhite: "#F0F0F0",
       },
       height:{
         '100': '26rem',

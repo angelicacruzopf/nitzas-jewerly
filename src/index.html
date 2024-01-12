@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
+    <link href="./tailwind.css" rel="stylesheet" />
+    <title>Nitza's Jewerly</title>
   </head>
   <body>
     <!-- FIXED NAV -->
 
     <nav
-      class="navbar fixed-nav flex-row justify-between items-center text-sm bg-white py-2 px-4 fixed z-50 w-full gap-4 shadow-md"
+      class="hidden md:flex fixed-nav flex-row justify-between items-center text-sm bg-white py-2 px-4 fixed z-50 w-full gap-4 shadow-md"
     >
       <div class="h-10">
         <img
@@ -20,24 +21,36 @@
       </div>
       <div class="flex flex-row grow justify-center max-w-[1000px]">
         <ul
-          class="flex flex-row grow justify-evenly font-normal text-center text-darkGray gap-2 cursor-pointer"
+          class="flex flex-row grow justify-evenly font-normal text-center text-darkGray gap-2 cursor-pointer items-center"
         >
-          <li>
+          <li
+            class="flex justify py-1 px-2 items hover:underline transition-all ease-in"
+          >
             <a href="#hero">Inicio</a>
           </li>
-          <li>
+          <li
+            class="flex justify py-1 px-2 items hover:underline transition-all ease-in"
+          >
             <a href="#products">Productos</a>
           </li>
-          <li>
+          <li
+            class="flex justify py-1 px-2 items hover:underline transition-all ease-in"
+          >
             <a href="#about">Sobre nosotros</a>
           </li>
-          <li>
+          <li
+            class="flex justify py-1 px-2 items hover:underline transition-all ease-in"
+          >
             <a href="#departamentos">Departamentos</a>
           </li>
-          <li>
+          <li
+            class="flex justify py-1 px-2 items hover:underline transition-all ease-in"
+          >
             <a href="#contacto">Contacto</a>
           </li>
-          <li>
+          <li
+            class="flex justify py-1 px-2 items hover:underline transition-all ease-in"
+          >
             <a href="#sucursales">Sucursales </a>
           </li>
         </ul>
@@ -45,7 +58,7 @@
       <div>
         <button
           type="button"
-          class="bg-black text-white py-2 px-4 font-bold text-lg flex gap-2 items-center hover:bg-neutralGray transition-all ease-in sm:text-xs lg:text-base"
+          class="bg-black text-white py-1 px-2 md:py-2 lg:px-4 font-bold flex gap-2 items-center hover:bg-neutralGray transition-all ease-in sm:text-xs lg:text-base min-w-24"
         >
           <div>
             <img src="./img/icons/call-icon.png" alt="Ícono llamada" class="" />
@@ -58,7 +71,7 @@
     <!-- MOBILE NAV -->
 
     <nav
-      class="mobile-nav fixed flex-row justify-between items-center text-sm bg-white z-40 w-full shadow-md top-0 flex p-4"
+      class="md:hidden fixed flex-row justify-between items-center text-sm bg-white z-40 w-full shadow-md top-0 flex p-4"
     >
       <div class="flex flex-row items-center justify-between text-sm w-full">
         <div class="h-10">
@@ -72,7 +85,7 @@
           <div>
             <button
               type="button"
-              class="py-2 px-4 rounded-full font-bold text-lg items-center hover:bg-secondary transition-all ease-in sm:text-xs lg:text-base"
+              class="py-2 px-4 font-bold text-lg items-center hover:border-secondary hover:border-2 transition-all ease-in sm:text-xs lg:text-base"
             >
               <div class="text-lg text-darkGray cursor-pointer">
                 <img
@@ -88,30 +101,44 @@
 
             <div
               id="menu"
-              class="checked:flex flex-col grow justify-center absolute top-[76px] right-[0] hidden"
+              class="flex flex-col grow justify-center absolute top-[73px] right-[0]"
             >
               <ul
-                class="navbar flex flex-col grow justify-evenly font-medium text-lighterGray text-center divide-y z-50 bg-white"
+                class="flex flex-col grow justify-evenly font-medium text-neutralGray text-center divide-y z-50 bg-white"
               >
-                <li>
+                <li
+                  class="py-2 px-8 flex items justify-center hover:bg-secondary hover:bg-opacity-50"
+                >
                   <a href="#hero">Inicio</a>
                 </li>
-                <li>
+                <li
+                  class="py-2 px-8 flex items justify-center hover:bg-secondary hover:bg-opacity-50"
+                >
                   <a href="#products">Productos</a>
                 </li>
-                <li>
+                <li
+                  class="py-2 px-8 flex items justify-center hover:bg-secondary hover:bg-opacity-50"
+                >
                   <a href="#about">Sobre nosotros</a>
                 </li>
-                <li>
+                <li
+                  class="py-2 px-8 flex items justify-center hover:bg-secondary hover:bg-opacity-50"
+                >
                   <a href="#departamentos">Departamentos</a>
                 </li>
-                <li>
+                <li
+                  class="py-2 px-8 flex items justify-center hover:bg-secondary hover:bg-opacity-50"
+                >
                   <a href="#contacto">Contacto</a>
                 </li>
-                <li>
+                <li
+                  class="py-2 px-8 flex items justify-center hover:bg-secondary hover:bg-opacity-50"
+                >
                   <a href="#sucursales">Sucursales</a>
                 </li>
-                <li>
+                <li
+                  class="py-2 px-8 flex items justify-center hover:bg-secondary hover:bg-opacity-50"
+                >
                   <a href="#horarios">Horarios</a>
                 </li>
               </ul>
@@ -143,7 +170,7 @@
 
     <section
       id="hero"
-      class="text-center flex flex-col md:flex-row items-center banner justify-between relative h-[800px] md:h-[600px] mt-[50px] md:mt-0 md:top-[20px]"
+      class="text-center flex flex-col md:flex-row items-center justify-between h-[800px] md:h-[600px] mt-[50px] pt-8 md:mt-0 md:top-[20px] bg-hero-mobile bg-cover bg-no-repeat bg-center"
     >
       <div class="hidden md:inline-block h-full w-1/2">
         <img
@@ -153,9 +180,9 @@
         />
       </div>
       <div
-        class="flex flex-col justify-evenly items-center w-[80%] md:w-1/2 h-[70%] md:bg-third py-20 md:h-full"
+        class="flex flex-col justify-evenly items-center w-[80%] md:w-1/2 h-[70%] md:bg-third pt-20 md:h-full md:justify-center"
       >
-        <div class="w-full md:w-2/3 py-4">
+        <div class="w-full md:w-2/3 py-4 md:py-0">
           <h2 class="text-xl uppercase font-bold">Gran venta de</h2>
           <img
             src="./img/xmas-letters-red@2x.png"
@@ -202,7 +229,7 @@
         </h2>
 
         <div class="w-full md:hidden">
-          <div class="slideshow-container">
+          <div id="slideshow-container">
             <!-- CARD 01 -->
 
             <div class="w-full min-w-[280px] flex flex-col">
@@ -364,13 +391,27 @@
             </div>
           </div>
 
-          <div class="flex justify-center mb-8">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+          <!-- DOTS -->
+
+          <div class="flex gap-2 justify-center mb-8">
+            <span
+              class="h-4 w-4 bg-lightGray rounded-full inline-block hover:bg-mediumGray transition-all ease-in"
+            ></span>
+            <span
+              class="h-4 w-4 bg-lightGray rounded-full inline-block hover:bg-mediumGray transition-all ease-in"
+            ></span>
+            <span
+              class="h-4 w-4 bg-lightGray rounded-full inline-block hover:bg-mediumGray transition-all ease-in"
+            ></span>
+            <span
+              class="h-4 w-4 bg-lightGray rounded-full inline-block hover:bg-mediumGray transition-all ease-in"
+            ></span>
+            <span
+              class="h-4 w-4 bg-lightGray rounded-full inline-block hover:bg-mediumGray transition-all ease-in"
+            ></span>
+            <span
+              class="h-4 w-4 bg-lightGray rounded-full inline-block hover:bg-mediumGray transition-all ease-in"
+            ></span>
           </div>
         </div>
 
@@ -515,7 +556,7 @@
         </div>
 
         <div
-          class="w-full gap-x-4 mt-10 h-fit flex flex-col justify-center items-center"
+          class="w-full gap-x-4 h-fit flex flex-col justify-center items-center"
         >
           <div class="w-full md:w-1/3">
             <button
@@ -777,10 +818,18 @@
             </div>
           </div>
 
-          <div class="flex justify-center mb-8">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+          <!-- DOTS -->
+
+          <div class="flex gap-2 justify-center mb-8">
+            <span
+              class="h-4 w-4 bg-lightGray rounded-full inline-block hover:bg-mediumGray transition-all ease-in"
+            ></span>
+            <span
+              class="h-4 w-4 bg-lightGray rounded-full inline-block hover:bg-mediumGray transition-all ease-in"
+            ></span>
+            <span
+              class="h-4 w-4 bg-lightGray rounded-full inline-block hover:bg-mediumGray transition-all ease-in"
+            ></span>
           </div>
         </div>
 
@@ -918,9 +967,9 @@
         <div class="flex flex-col md:w-1/2 gap-4 w-full">
           <!-- FORMULARIO -->
 
-          <form class="flex flex-col gap-4 h-full text-neitralGray">
+          <form class="flex flex-col gap-4 h-full text-mediumGray">
             <div class="flex flex-col md:flex-row gap-4 w-full">
-              <div class="field md:w-1/2">
+              <div class="relative md:w-1/2">
                 <input
                   type="text"
                   name="firstName"
@@ -929,18 +978,14 @@
                   maxlength="32"
                   pattern="[A-Za-z\s]{1,32}"
                   title="Nombres"
-                  class="invalid:border-pink-500 invalid:text-pink-600"
+                  class="w-full h-12 p-4 text-mediumGray invalid:border-pink-500 invalid:text-pink-600 bg-white"
+                  placeholder="Nombres"
                 />
-                <label
-                  htmlFor="firstName"
-                  title="Nombres"
-                  data-title="Nombres"
-                ></label>
-                <span class="error">
+                <span class="inline-block text-white">
                   Este campo no puede estar vacío, e.g. John
                 </span>
               </div>
-              <div class="field md:w-1/2">
+              <div class="relative md:w-1/2">
                 <input
                   type="text"
                   name="lastName"
@@ -948,71 +993,55 @@
                   maxlength="32"
                   pattern="[A-Za-z]{1,32}"
                   required
-                  class="invalid:border-pink-500 invalid:text-pink-600"
+                  class="w-full h-12 p-4 text-mediumGray invalid:border-pink-500 invalid:text-pink-600 bg-white"
+                  placeholder="Apellidos"
                 />
-                <label
-                  htmlFor="lastName"
-                  title="Apellidos"
-                  data-title="Apellidos"
-                ></label>
-                <span class="error"
+
+                <span class="inline-block text-white"
                   >Este campo no puede estar vacío, e.g. Doe</span
                 >
               </div>
             </div>
 
-            <div class="col-span-2 field">
+            <div class="col-span-2 relative">
               <input
                 type="email"
                 name="email"
                 id="email"
-                class="invalid:border-pink-500 invalid:text-pink-600"
+                class="w-full h-12 p-4 text-mediumGray invalid:border-pink-500 invalid:text-pink-600 bg-white"
                 pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                 required
+                placeholder="Correo electrónico"
               />
-              <label
-                htmlFor="email"
-                title="Correo electrónico"
-                data-title="Correo electrónico"
-                class="peer-invalid:text-pink-600"
-              ></label>
-              <span class="error">
+
+              <span class="inline-block text-white">
                 Este campo no puede estar vacío, e.g. correo@ejemplo.com
               </span>
             </div>
 
-            <div class="col-span-2 field">
+            <div class="col-span-2 relative">
               <input
                 type="tel"
                 name="phone"
                 id="phone"
-                class="focus:invalid:border-pink-500 invalid:text-pink-600"
+                class="w-full h-12 p-4 text-mediumGray invalid:border-pink-500 invalid:text-pink-600 bg-white"
                 pattern="^\+[1-9]{1}[0-9]{3,14}$"
                 required
+                placeholder="Número telefónico"
               />
 
-              <label
-                htmlFor="phone"
-                title="Número telefónico"
-                data-title="Número telefónico"
-              ></label>
-              <span class="error">
+              <span class="inline-block text-white">
                 Este campo no puede estar vacío, e.g. +27 123 4567
               </span>
             </div>
-            <div class="col-span-2 row-span-6 h-full field">
+            <div class="col-span-2 row-span-6 h-full relative">
               <textarea
                 name="message"
                 id="message"
                 required
-                class="h-full placeholder:pt-2 focus:invalid:border-pink-500 invalid:text-pink-600"
+                class="w-full h-32 p-4 resize-none invalid:border-pink-500 text-mediumGray invalid:text-pink-600 bg-white"
+                placeholder="Escribe un mensaje"
               ></textarea>
-
-              <label
-                htmlFor="message"
-                title="Escribe un mensaje"
-                data-title="Escribe un mensaje"
-              ></label>
             </div>
           </form>
 
@@ -1021,7 +1050,7 @@
           >
             <button
               type="submit"
-              class="bg-darkGray text-white py-2 px-4 font-semibold text-lg flex gap-2 items-center justify-center w-full hover:bg-black transition-all ease-in"
+              class="bg-darkGray text-white py-2 px-4 font-semibold text-lg flex gap-2 items-center justify-center w-full hover:bg-black transition-all ease-in md:w-1/2"
             >
               Enviar mensaje
             </button>
@@ -1030,199 +1059,216 @@
       </div>
     </section>
 
-     <!-- SUCURSALES -->
+    <!-- SUCURSALES -->
 
-     <section id="sucursales" class="flex justify-center">
-        <div
-          class="flex flex-col w-[90%] md:w-9/12 md:justify-center items-center max-w-[1000px] py-16"
-        >
-          <h2 class="font-bold text-center mb-10 text-2xl md:text-5xl">
-            Nuestras sucursales
-          </h2>
-          <div class="flex flex-col max-w-[800px]">
-            <div class="flex items-center">
-              <h3 class="font-bold py-4">Puerto rico</h3>
-              <span class="text-lighterGray ms-2">(2 ubicaciones)</span>
-            </div>
-            <div class="divide-y w-full flex flex-col justify-center md:justify-between md:flex-row md:divide-y-0">
-
-              <!-- SUCURSAL 01 -->
-  
-              <div class="flex items-center justify-between md:w-[45%] gap-2">
-                <div class="bg-gray-300 rounded-3xl my-4">
-                  <img src="img/map.png" alt="mapa" />
-                </div>
-                <div class="w-1/2">
-                  <h4 class="font-bold md:text-lg ms-4 sm:m-0">
-                    Corozal | Carr. 818 KM 0.8 Bo. Cibuco
-                  </h4>
-                  <p class="font-normal text-lighterGray ms-4 sm:m-0">
-                    (787) 516 9563
-                  </p>
-                </div>
-                <div class="ms-4 sm:m-0">
-                    <button
-                    type="button"
-                    class=" bg-black text-white py-2 px-4 font-bold text-lg flex gap-2 items-center hover:opacity-50 transition-all ease-in sm:text-xs lg:text-base"
-                  >
-                    Llamar
-                  </button>
-                </div>
-              </div>
-  
-              <!-- SUCURSAL 02 -->
-  
-              <div class="flex items-center justify-between md:w-[45%] gap-2">
-                <div class="bg-gray-300 rounded-3xl my-4">
-                  <img src="img/map.png" alt="mapa" />
-                </div>
-                <div class="w-1/2">
-                  <h4 class="font-bold md:text-lg ms-4 sm:m-0">
-                    Morovis | Calle Principal 44, Morovis
-                  </h4>
-                  <p class="font-normal text-lighterGray ms-4 sm:m-0">
-                    (939) 450 4546
-                  </p>
-                </div>
-                <div class="ms-4 sm:m-0">
-                  <button
-                    type="button"
-                    class=" bg-black text-white py-2 px-4 font-bold text-lg flex gap-2 items-center hover:opacity-50 transition-all ease-in sm:text-xs lg:text-base"
-                  >
-                    Llamar
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <!-- HORARIOS -->
-  
-      <section id="horarios">
-        <div
-          class="flex flex-col items-center ms-4 text-neutralGray gap-y-4 md:hidden text-lg font-semibold max-w-[1000px] pb-16"
-        >
-          <p class="font-bold text-black text-2xl">Horarios:</p>
-          <p>Lunes a Domingo: 10:00am - 6:00pm</p>
-        </div>
-      </section>
-
-
-      <!-- FAQ -->
-
-      <section class="flex justify-center bg-mediumGray">
-        <div class="flex flex-col items-center w-[90%] md:w-9/12 py-16 text-white max-w-[1000px]">
-            <h2 class="font-bold mb-10 text-2xl md:text-4xl">FAQs</h2>
-            <div class="divide-y w-full">
-                
-              <!-- QUESTION 1 -->
-
-              <div>
-                <div class=" accordion flex justify-between py-6" >
-                  <div class="font-semibold">¿En donde se encuentran ubicados?</div>
-                  <button class="text-white text-2xl">+</button>
-                </div>
-                <div class="pb-4 text-white divide-y">“Contamos con 2 sucursales en localizadas en Puerto Rico, USA. Sucursal Corozal: Carretera 818 KM 0.8 Bo. Cibuco.Sucursal Morovis:  Calle Principal 44, Morovis”</div>
-              </div>
-
-              <!-- QUESTION 2 -->
-
-              <div>
-                <div class=" accordion flex justify-between py-6" >
-                  <div class="font-semibold">¿Cómo puedo contactarlos?</div>
-                  <button class="text-white text-2xl">+</button>
-                </div>
-                <div class="pb-4 text-white divide-y">“Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.”</div>
-              </div>
-              
-               <!-- QUESTION 3 -->
-
-               <div>
-                <div class=" accordion flex justify-between py-6" >
-                  <div class="font-semibold">¿Los productos tienen garantía?</div>
-                  <button class="text-white text-2xl">+</button>
-                </div>
-                <div class="pb-4 text-white divide-y">“Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.”</div>
-              </div>
-
-               <!-- QUESTION 4 -->
-
-               <div>
-                <div class=" accordion flex justify-between py-6" >
-                  <div class="font-semibold">¿Puedo apartar un producto?</div>
-                  <button class="text-white text-2xl">+</button>
-                </div>
-                <div class="pb-4 text-white divide-y">“Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.”</div>
-              </div>
-
-               <!-- QUESTION 5 -->
-
-               <div>
-                <div class=" accordion flex justify-between py-6" >
-                  <div class="font-semibold">¿Qué tipo de productos manejan?</div>
-                  <button class="text-white text-2xl">+</button>
-                </div>
-                <div class="pb-4 text-white divide-y">“Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.”</div>
-              </div>
-
-
-            </div>
-        </div>
-     </section>
-  
-      <!-- FOOTER -->
-  
-      <section
-        class="bg-darkGray flex flex-col justify-center items-center py-16"
+    <section id="sucursales" class="flex justify-center">
+      <div
+        class="flex flex-col w-[90%] md:w-9/12 md:justify-center items-center max-w-[1000px] py-16"
       >
-        <div
-          class="md:grid grid-cols-3 w-[90%] sm:w-3/5 place-items-center pb-16 max-w-[1000px]"
-        >
-          <div class="flex flex-col gap-6 w-full">
-            <div
-              class=" justify-self-center self-center flex justify-center items-center"
-            >
-              <img
-                src="img/logos/logo-w-text.png"
-                alt="Ícono del logo"
-                class="md:object-cover md:w-14"
-              />
-            </div>
-            <p class="text-white text-center">Marcando la diferencia</p>
-            <div
-              class="text-white opacity-50 text-5xl flex flex-row justify-center mb-6 sm:mb-0"
-            >
-              <i class="fa-brands fa-facebook"></i>
-            </div>
+        <h2 class="font-bold text-center mb-10 text-2xl md:text-5xl">
+          Nuestras sucursales
+        </h2>
+        <div class="flex flex-col max-w-[800px]">
+          <div class="flex items-center">
+            <h3 class="font-bold py-4">Puerto rico</h3>
+            <span class="text-lightGray ms-2">(2 ubicaciones)</span>
           </div>
-          <div class="flex flex-col gap-y-4 mb-4 sm:mb-0 text-white">
-            <h3 class="font-bold">Mapa del sitio</h3>
-            <ul class="grid gap-y-4 underline opacity-60">
-              <li class="sm:hidden"><a href="#hero">Inicio</a></li>
-              <li><a href="#products">Nuestros productos</a></li>
-              <li><a href="#about">Acerca de nosotros</a></li>
-              <li><a href="#departamentos">Departamentos</a></li>
-            </ul>
-          </div>
-          <div class="text-white opacity-60">
-            <ul class="grid gap-y-4 underline">
-              <li><a href="#contacto">Contacto</a></li>
-              <li><a href="#sucursales">Nuestras sucursales</a></li>
-            </ul>
+          <div
+            class="divide-y w-full flex flex-col justify-center md:justify-between md:flex-row md:divide-y-0"
+          >
+            <!-- SUCURSAL 01 -->
+
+            <div class="flex items-center justify-between md:w-[45%] gap-2">
+              <div class="bg-gray-300 rounded-3xl my-4">
+                <img src="img/map.png" alt="mapa" />
+              </div>
+              <div class="w-1/2">
+                <h4 class="font-bold md:text-lg ms-4 sm:m-0">
+                  Corozal | Carr. 818 KM 0.8 Bo. Cibuco
+                </h4>
+                <p class="font-normal text-lightGray ms-4 sm:m-0">
+                  (787) 516 9563
+                </p>
+              </div>
+              <div class="ms-4 sm:m-0">
+                <button
+                  type="button"
+                  class="bg-black text-white py-2 px-4 font-bold text-lg flex gap-2 items-center hover:opacity-50 transition-all ease-in sm:text-xs lg:text-base"
+                >
+                  Llamar
+                </button>
+              </div>
+            </div>
+
+            <!-- SUCURSAL 02 -->
+
+            <div class="flex items-center justify-between md:w-[45%] gap-2">
+              <div class="bg-gray-300 rounded-3xl my-4">
+                <img src="img/map.png" alt="mapa" />
+              </div>
+              <div class="w-1/2">
+                <h4 class="font-bold md:text-lg ms-4 sm:m-0">
+                  Morovis | Calle Principal 44, Morovis
+                </h4>
+                <p class="font-normal text-lightGray ms-4 sm:m-0">
+                  (939) 450 4546
+                </p>
+              </div>
+              <div class="ms-4 sm:m-0">
+                <button
+                  type="button"
+                  class="bg-black text-white py-2 px-4 font-bold text-lg flex gap-2 items-center hover:opacity-50 transition-all ease-in sm:text-xs lg:text-base"
+                >
+                  Llamar
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        <hr class="opacity-50 w-[90%] md:w-3/5" />
-        <span
-          class="sm:text-center text-white opacity-60 pt-8 mb-8 w-[90%] md:w-3/5"
-          >2023, Hardware Solutions Inc., Todos los derechos reservados.</span
-        >
-      </section>
+      </div>
+    </section>
+
+    <!-- HORARIOS -->
+
+    <section id="horarios">
+      <div
+        class="flex flex-col items-center ms-4 text-neutralGray gap-y-4 md:hidden text-lg font-semibold max-w-[1000px] pb-16"
+      >
+        <p class="font-bold text-black text-2xl">Horarios:</p>
+        <p>Lunes a Domingo: 10:00am - 6:00pm</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="flex justify-center bg-mediumGray">
+      <div
+        class="flex flex-col items-center w-[90%] md:w-9/12 py-16 text-white max-w-[1000px]"
+      >
+        <h2 class="font-bold mb-10 text-2xl md:text-4xl">FAQs</h2>
+        <div class="divide-y w-full">
+          <!-- QUESTION 1 -->
+
+          <div>
+            <div class="accordion flex justify-between py-6">
+              <div class="font-semibold">¿En donde se encuentran ubicados?</div>
+              <button class="text-white text-2xl">+</button>
+            </div>
+            <div class="pb-4 text-white divide-y">
+              “Contamos con 2 sucursales en localizadas en Puerto Rico, USA.
+              Sucursal Corozal: Carretera 818 KM 0.8 Bo. Cibuco.Sucursal
+              Morovis: Calle Principal 44, Morovis”
+            </div>
+          </div>
+
+          <!-- QUESTION 2 -->
+
+          <div>
+            <div class="accordion flex justify-between py-6">
+              <div class="font-semibold">¿Cómo puedo contactarlos?</div>
+              <button class="text-white text-2xl">+</button>
+            </div>
+            <div class="pb-4 text-white divide-y">
+              “Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam
+              delectus nihil. Aut enim doloremque et ipsam.”
+            </div>
+          </div>
+
+          <!-- QUESTION 3 -->
+
+          <div>
+            <div class="accordion flex justify-between py-6">
+              <div class="font-semibold">¿Los productos tienen garantía?</div>
+              <button class="text-white text-2xl">+</button>
+            </div>
+            <div class="pb-4 text-white divide-y">
+              “Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam
+              delectus nihil. Aut enim doloremque et ipsam.”
+            </div>
+          </div>
+
+          <!-- QUESTION 4 -->
+
+          <div>
+            <div class="accordion flex justify-between py-6">
+              <div class="font-semibold">¿Puedo apartar un producto?</div>
+              <button class="text-white text-2xl">+</button>
+            </div>
+            <div class="pb-4 text-white divide-y">
+              “Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam
+              delectus nihil. Aut enim doloremque et ipsam.”
+            </div>
+          </div>
+
+          <!-- QUESTION 5 -->
+
+          <div>
+            <div class="accordion flex justify-between py-6">
+              <div class="font-semibold">¿Qué tipo de productos manejan?</div>
+              <button class="text-white text-2xl">+</button>
+            </div>
+            <div class="pb-4 text-white divide-y">
+              “Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam
+              delectus nihil. Aut enim doloremque et ipsam.”
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <section
+      class="bg-darkGray flex flex-col justify-center items-center py-16"
+    >
+      <div
+        class="md:grid grid-cols-3 w-[90%] sm:w-3/5 place-items-center pb-16 max-w-[1000px]"
+      >
+        <div class="flex flex-col gap-6 w-full">
+          <div
+            class="justify-self-center self-center flex justify-center items-center h-16"
+          >
+            <img
+              src="img/logos/logo-w-text.png"
+              alt="Ícono del logo"
+              class="md:object-cover h-full w-full"
+            />
+          </div>
+          <p class="text-white text-center">Marcando la diferencia</p>
+
+          <!-- ICONOS REDES SOCIALES -->
+          <div
+            class="text-white opacity-50 text-5xl flex flex-row justify-center gap-4 md:justify-evenly mb-6 sm:mb-0"
+          >
+              <img src="./img/icons/facebook-w.png" alt="facebook icon">
+              <img src="./img/icons/whatsapp-w.png" alt="facebook icon">  
+              <img src="./img/icons/instagram-w.png" alt="facebook icon">          
+          </div>
+
+        </div>
 
 
-      
-
-
+        <div class="flex flex-col gap-y-4 mb-4 sm:mb-0 text-white">
+          <h3 class="font-bold">Mapa del sitio</h3>
+          <ul class="grid gap-y-4 underline opacity-60">
+            <li class="sm:hidden"><a href="#hero">Inicio</a></li>
+            <li><a href="#products">Nuestros productos</a></li>
+            <li><a href="#about">Acerca de nosotros</a></li>
+            <li><a href="#departamentos">Departamentos</a></li>
+          </ul>
+        </div>
+        <div class="text-white opacity-60">
+          <ul class="grid gap-y-4 underline">
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#sucursales">Nuestras sucursales</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="opacity-50 w-[90%] md:w-3/5" />
+      <span
+        class="sm:text-center text-white opacity-60 pt-8 mb-8 w-[90%] md:w-3/5"
+        >2023, Hardware Solutions Inc., Todos los derechos reservados.</span
+      >
+    </section>
   </body>
 </html>
